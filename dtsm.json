@@ -15,6 +15,9 @@
   "dependencies": {
     "gulp/gulp.d.ts": {
       "ref": "af76bf46025371c760d8fe8c03cf874428da6124"
+    },
+    "gulp-typescript/gulp-typescript.d.ts": {
+      "ref": "af76bf46025371c760d8fe8c03cf874428da6124"
     }
   }
 }

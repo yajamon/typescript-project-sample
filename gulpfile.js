@@ -1,16 +1,19 @@
 /// <reference path="typings/gulp/gulp.d.ts" />
+/// <reference path="typings/gulp-typescript/gulp-typescript.d.ts" />
 
 var gulp = require('gulp');
-var tsc  = require('gulp-typescript');
+var ts  = require('gulp-typescript');
 
 // config
 
 var path = {
     src : {
         html: "src/html/**/*.html",
+        ts: "src/ts/**/*.ts",
     },
     dest : {
-        html: "dest/html/"
+        html: "dest/html/",
+        js: "dest/js",
     }
 };
 
