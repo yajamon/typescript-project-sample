@@ -40,11 +40,11 @@ gulp.task('build:ts', function(){
     var tsResult = gulp.src(path.src.ts)
         .pipe(ts(tsProject));
     
-    return tsResult.js.pipe(gulp.dest(path.dest.js));
+    tsResult.js.pipe(gulp.dest(path.dest.js));
 });
 
 gulp.task('build:less', function(){
-    return gulp.src(path.src.less)
+    gulp.src(path.src.less)
         .pipe(less())
         .pipe(gulp.dest(path.dest.css));
 });
