@@ -4,6 +4,8 @@
   "description": "0.0.1",
   "main": "gulpfile.js",
   "scripts": {
+    "postinstall": "dtsm install",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
