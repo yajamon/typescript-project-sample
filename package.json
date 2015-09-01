@@ -1,7 +1,7 @@
 {
   "name": "typescript-project-sample",
-  "version": "1.0.0",
-  "description": "0.0.1",
+  "version": "0.0.1",
+  "description": "typescript-project-sample",
   "main": "gulpfile.js",
   "scripts": {
     "postinstall": "dtsm install",
