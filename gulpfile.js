@@ -1,5 +1,6 @@
 /// <reference path="typings/gulp/gulp.d.ts" />
 /// <reference path="typings/gulp-typescript/gulp-typescript.d.ts" />
+/// <reference path="typings/gulp-less/gulp-less.d.ts" />
 
 var gulp = require('gulp');
 var ts  = require('gulp-typescript');
