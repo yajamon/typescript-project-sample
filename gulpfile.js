@@ -4,6 +4,7 @@
 
 var gulp = require('gulp');
 var ts  = require('gulp-typescript');
+var less = require('gulp-less');
 
 // config
 
@@ -11,10 +12,12 @@ var path = {
     src : {
         html: "src/html/**/*.html",
         ts: "src/ts/**/*.ts",
+        less: "src/less/**/*.less",
     },
     dest : {
         html: "dest/html/",
-        js: "dest/js",
+        js: "dest/js/",
+        css: "dest/css/",
     }
 };
 
@@ -22,7 +25,7 @@ var tsProject = ts.createProject('src/tsconfig.json', {out: "app.js"});
 
 // main tasks
 
-gulp.task('build', ['build:html', 'build:ts']);
+gulp.task('build', ['build:html', 'build:ts', 'build:less']);
 
 gulp.task('watch', ['watch:html', 'watch:ts']);
 
@@ -38,6 +41,12 @@ gulp.task('build:ts', function(){
         .pipe(ts(tsProject));
     
     return tsResult.js.pipe(gulp.dest(path.dest.js));
+});
+
+gulp.task('build:less', function(){
+    return gulp.src(path.src.less)
+        .pipe(less())
+        .pipe(gulp.dest(path.dest.css));
 });
 
 gulp.task('watch:html', function(){
