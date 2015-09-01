@@ -1,6 +1,6 @@
 {
   "name": "typescript-project-sample",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "typescript-project-sample",
   "main": "gulpfile.js",
   "scripts": {
