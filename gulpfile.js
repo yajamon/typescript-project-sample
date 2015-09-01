@@ -56,3 +56,7 @@ gulp.task('watch:html', function(){
 gulp.task('watch:ts', function(){
     gulp.watch(path.src.ts, ['build:ts']);
 });
+
+gulp.task('watch:less', function(){
+    gulp.watch(path.src.less, ['build:less']);
+});
