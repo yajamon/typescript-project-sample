@@ -23,6 +23,8 @@ var tsProject = ts.createProject('src/tsconfig.json', {out: "app.js"});
 
 gulp.task('build', ['build:html', 'build:ts']);
 
+gulp.task('watch', ['watch:html', 'watch:ts']);
+
 // sub tasks
 
 gulp.task('build:html', function(){
@@ -35,4 +37,12 @@ gulp.task('build:ts', function(){
         .pipe(ts(tsProject));
     
     return tsResult.js.pipe(gulp.dest(path.dest.js));
+});
+
+gulp.task('watch:html', function(){
+    gulp.watch(path.src.html, ['build:html']);
+});
+
+gulp.task('watch:ts', function(){
+    gulp.watch(path.src.ts, ['build:ts']);
 });
