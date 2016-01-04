@@ -16,6 +16,7 @@ var path = {
         img: "src/img/**/*.*",
     },
     dest : {
+        root: "dest/",
         html: "dest/html/",
         js: "dest/js/",
         css: "dest/css/",
