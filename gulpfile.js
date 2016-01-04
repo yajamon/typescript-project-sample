@@ -13,11 +13,13 @@ var path = {
         html: "src/html/**/*.html",
         ts: "src/ts/**/*.ts",
         less: "src/less/**/*.less",
+        img: "src/img/**/*.*",
     },
     dest : {
         html: "dest/html/",
         js: "dest/js/",
         css: "dest/css/",
+        img: "dest/img/",
     }
 };
 
@@ -25,7 +27,7 @@ var tsProject = ts.createProject('src/tsconfig.json', {out: "app.js"});
 
 // main tasks
 
-gulp.task('build', ['build:html', 'build:ts', 'build:less']);
+gulp.task('build', ['build:html', 'build:ts', 'build:less', 'build:img']);
 
 gulp.task('watch', ['watch:html', 'watch:ts', 'watch:less']);
 
@@ -59,4 +61,8 @@ gulp.task('watch:ts', function(){
 
 gulp.task('watch:less', function(){
     gulp.watch(path.src.less, ['build:less']);
+});
+
+gulp.task('watch:img', function(){
+    gulp.watch(path.src.img, ['build:img']);
 });
