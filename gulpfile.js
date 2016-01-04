@@ -28,9 +28,18 @@ var tsProject = ts.createProject('src/tsconfig.json', {out: "app.js"});
 
 // main tasks
 
-gulp.task('build', ['build:html', 'build:ts', 'build:less', 'build:img']);
+gulp.task('build', [
+    'build:html',
+    'build:ts',
+    'build:less',
+    'build:img',
+]);
 
-gulp.task('watch', ['watch:html', 'watch:ts', 'watch:less']);
+gulp.task('watch', [
+    'watch:html',
+    'watch:ts',
+    'watch:less',
+]);
 
 // sub tasks
 
