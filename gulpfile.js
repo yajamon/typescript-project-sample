@@ -39,6 +39,7 @@ gulp.task('watch', [
     'watch:html',
     'watch:ts',
     'watch:less',
+    'watch:img',
 ]);
 
 // sub tasks
