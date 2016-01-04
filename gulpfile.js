@@ -27,7 +27,7 @@ var path = {
     }
 };
 
-var tsProject = ts.createProject('src/tsconfig.json', {out: "app.js"});
+var tsProject = ts.createProject('src/tsconfig.json', {out: "app.js", sortOutput: true});
 
 // main tasks
 
@@ -56,7 +56,7 @@ gulp.task('build:html', function(){
 gulp.task('build:ts', function(){
     var tsResult = gulp.src(path.src.ts)
         .pipe(ts(tsProject));
-    
+
     tsResult.js.pipe(gulp.dest(path.dest.js));
 });
 
