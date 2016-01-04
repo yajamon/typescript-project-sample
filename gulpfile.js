@@ -21,6 +21,9 @@ var path = {
         js: "dest/js/",
         css: "dest/css/",
         img: "dest/img/",
+        vendor: {
+            root: "dest/vendor/",
+        },
     }
 };
 
@@ -33,6 +36,7 @@ gulp.task('build', [
     'build:ts',
     'build:less',
     'build:img',
+    'build:vendor',
 ]);
 
 gulp.task('watch', [
@@ -66,6 +70,11 @@ gulp.task('build:img', function(){
     gulp.src(path.src.img)
         .pipe(gulp.dest(path.dest.img));
 });
+
+gulp.task('build:vendor', function (){
+
+});
+
 
 gulp.task('watch:html', function(){
     gulp.watch(path.src.html, ['build:html']);
