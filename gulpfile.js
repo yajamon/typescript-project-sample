@@ -52,6 +52,11 @@ gulp.task('build:less', function(){
         .pipe(gulp.dest(path.dest.css));
 });
 
+gulp.task('build:img', function(){
+    gulp.src(path.src.img)
+        .pipe(gulp.dest(path.dest.img));
+});
+
 gulp.task('watch:html', function(){
     gulp.watch(path.src.html, ['build:html']);
 });
