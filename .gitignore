@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/node,linux,macos,windows,visualstudiocode
+# Created by https://www.gitignore.io/api/node,linux,macos,windows,vim,visualstudiocode
 
 ### Linux ###
 *~
@@ -104,6 +104,17 @@ typings/
 .env
 
 
+### Vim ###
+# swap
+.sw[a-p]
+.*.sw[a-p]
+# session
+Session.vim
+# temporary
+.netrwhist
+# auto-generated tag files
+tags
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -134,4 +145,4 @@ $RECYCLE.BIN/
 *.lnk
 
 
-# End of https://www.gitignore.io/api/node,linux,macos,windows,visualstudiocode
+# End of https://www.gitignore.io/api/node,linux,macos,windows,vim,visualstudiocode
